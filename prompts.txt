@@ -1,0 +1,2 @@
+buat website CSR untuk amalsholeh.com dengan gaya corporate, teknologi modern dan elegan
+oke, tambahkan section untuk menampung kebutuhan gambar, buat dengan grid.
