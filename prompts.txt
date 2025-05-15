@@ -1,2 +1,3 @@
 buat website CSR untuk amalsholeh.com dengan gaya corporate, teknologi modern dan elegan
 oke, tambahkan section untuk menampung kebutuhan gambar, buat dengan grid.
+sekarang fungsikan form message, tambahkan button arrow untuk bisa up/down ketika pengguna sedang di bagian atas/bawah layar. dan terapkan SEO juga
