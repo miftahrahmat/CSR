@@ -32,6 +32,16 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
+        /* Animation for the new section */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .animate-pulse {
+            animation: pulse 4s infinite;
+        }
         
         .impact-item::before {
             content: "";
@@ -149,12 +159,13 @@
                     </a>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About Us</a>
-                    <a href="#partners" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Partners</a>
-                    <a href="#programs" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Programs</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Beranda</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Tentang Kami</a>
+                    <a href="#csr" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Pilar CSR</a>
+                    <a href="#programs" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Program</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Galeri</a>
+                    <a href="#partners" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Mitra</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Kontak</a>
                 </div>
             </div>
         </div>
@@ -174,10 +185,10 @@
             <div class="md:flex items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Corporate Social Responsibility</h1>
-                    <p class="text-xl mb-8 opacity-90">Committed to creating sustainable impact through ethical business practices and community empowerment.</p>
+                    <p class="text-lg mb-8 opacity-90">Berkomitmen menciptakan dampak berkelanjutan melalui praktik bisnis etis dan pemberdayaan masyarakat.</p>
                     <div class="flex space-x-4">
-                        <a href="#programs" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Our Programs</a>
-                        <a href="#report" class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition duration-300">Annual Report</a>
+                        <a href="#programs" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Program Kami</a>
+                        <a href="#partners" class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition duration-300">Mitra Kami</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -188,75 +199,163 @@
     </header>
 
     <!-- Impact Counter -->
-    <section class="bg-white py-16">
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Our Impact in Numbers</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="impact-counter">
-                    <div class="text-5xl font-bold text-blue-600 mb-3 animated-counter" data-target="125">0</div>
-                    <p class="text-gray-600">Projects Completed</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Dampak Kami dalam Angka</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Kami mengukur kesuksesan melalui perubahan nyata yang kami ciptakan</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-blue-100 opacity-20"></div>
+                    <div class="text-5xl font-bold text-blue-600 mb-4 animated-counter" data-target="125">0</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Proyek Terselesaikan</h3>
+                    <p class="text-gray-500">Dalam berbagai bidang pemberdayaan</p>
                 </div>
-                <div class="impact-counter">
-                    <div class="text-5xl font-bold text-blue-600 mb-3 animated-counter" data-target="85000">0</div>
-                    <p class="text-gray-600">People Impacted</p>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-green-100 opacity-20"></div>
+                    <div class="text-5xl font-bold text-green-600 mb-4 animated-counter" data-target="85000">0</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Orang Terdampak</h3>
+                    <p class="text-gray-500">Kehidupan yang menjadi lebih baik</p>
                 </div>
-                <div class="impact-counter">
-                    <div class="text-5xl font-bold text-blue-600 mb-3 animated-counter" data-target="35">0</div>
-                    <p class="text-gray-600">Communities Served</p>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-purple-100 opacity-20"></div>
+                    <div class="text-5xl font-bold text-purple-600 mb-4 animated-counter" data-target="35">0</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Komunitas Terlayani</h3>
+                    <p class="text-gray-500">Dari berbagai daerah di Indonesia</p>
                 </div>
-                <div class="impact-counter">
-                    <div class="text-5xl font-bold text-blue-600 mb-3 animated-counter" data-target="15">0</div>
-                    <p class="text-gray-600">Years of Service</p>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-orange-100 opacity-20"></div>
+                    <div class="text-5xl font-bold text-orange-600 mb-4 animated-counter" data-target="15">0</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Tahun Pengabdian</h3>
+                    <p class="text-gray-500">Berkomitmen untuk perubahan sosial</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Kenapa Memilih AmalSholeh -->
+    <section class="relative py-24 bg-gradient-to-br from-blue-50 to-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">Keunggulan Kami</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Kenapa Memilih AmalSholeh.com?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Platform donasi terpercaya yang menjamin transparansi dan dampak sosial nyata bagi masyarakat.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-white rounded-2xl shadow-xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:rotate-6">
+                        <i class="fas fa-award text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Transparansi 100%</h3>
+                    <p class="text-gray-600">Laporan keuangan dan aktivitas kami tersedia secara real-time untuk memastikan akuntabilitas penuh kepada donatur.</p>
+                    <div class="mt-6">
+                        <span class="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
+                            <i class="fas fa-check-circle mr-2"></i> Terverifikasi
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white rounded-2xl shadow-xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:rotate-6">
+                        <i class="fas fa-chart-line text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dampak Terukur</h3>
+                    <p class="text-gray-600">Setiap donasi memberikan perubahan nyata yang dapat Anda pantau perkembangan dan hasilnya secara berkala.</p>
+                    <div class="mt-6">
+                        <span class="inline-block px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium">
+                            <i class="fas fa-chart-pie mr-2"></i> Laporan Real-time
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white rounded-2xl shadow-xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:rotate-6">
+                        <i class="fas fa-users text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Tim Ahli</h3>
+                    <p class="text-gray-600">Dikelola oleh profesional dengan sertifikasi zakat dan pengalaman bertahun-tahun di bidang filantropi Islam.</p>
+                    <div class="mt-6">
+                        <span class="inline-block px-4 py-2 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">
+                            <i class="fas fa-user-tie mr-2"></i> Bersertifikat
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl font-medium hover:shadow-lg transition-all">
+                    <i class="fas fa-hands-helping mr-2"></i> Bergabung Membantu
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full opacity-20 -mt-16 -mr-16"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-green-200 rounded-full opacity-10 -mb-32 -ml-32"></div>
+    </section>
+
     <!-- CSR Pillars -->
-    <section id="csr" class="bg-gray-50 py-20">
+    <section id="csr" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Our CSR Pillars</h2>
-            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">We focus on four key areas to drive sustainable development and create lasting impact.</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
-                    <div class="p-6">
-                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-hand-holding-heart text-blue-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Community Development</h3>
-                        <p class="text-gray-600">Empowering communities through education, healthcare, and infrastructure development.</p>
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">Area Fokus</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Pilar CSR Kami</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Empat pilar utama yang menjadi fondasi program CSR kami untuk menciptakan perubahan berkelanjutan</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
+                    <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                        <i class="fas fa-hand-holding-heart text-blue-600 text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pengembangan Masyarakat</h3>
+                    <p class="text-gray-600 mb-6">Memberdayakan masyarakat melalui pendidikan, kesehatan, dan pengembangan infrastruktur dasar.</p>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300">
+                        Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
-                
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
-                    <div class="p-6">
-                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-leaf text-green-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Environmental Sustainability</h3>
-                        <p class="text-gray-600">Promoting eco-friendly practices and conservation efforts for a greener future.</p>
+
+                <div class="bg-gradient-to-b from-green-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
+                    <div class="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                        <i class="fas fa-leaf text-green-600 text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Keberlanjutan Lingkungan</h3>
+                    <p class="text-gray-600 mb-6">Mempromosikan praktik ramah lingkungan dan upaya konservasi untuk masa depan yang lebih hijau.</p>
+                    <a href="#" class="inline-flex items-center text-green-600 hover:text-green-800 transition duration-300">
+                        Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
-                
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
-                    <div class="p-6">
-                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Education & Empowerment</h3>
-                        <p class="text-gray-600">Providing access to quality education and skills training for underprivileged groups.</p>
+
+                <div class="bg-gradient-to-b from-purple-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
+                    <div class="w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pendidikan & Pemberdayaan</h3>
+                    <p class="text-gray-600 mb-6">Menyediakan akses pendidikan berkualitas dan pelatihan keterampilan untuk kelompok kurang mampu.</p>
+                    <a href="#" class="inline-flex items-center text-purple-600 hover:text-purple-800 transition duration-300">
+                        Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
-                
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
-                    <div class="p-6">
-                        <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-heartbeat text-orange-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Health & Wellbeing</h3>
-                        <p class="text-gray-600">Improving healthcare access and promoting healthy lifestyles in underserved areas.</p>
+
+                <div class="bg-gradient-to-b from-orange-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
+                    <div class="w-20 h-20 bg-orange-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                        <i class="fas fa-heartbeat text-orange-600 text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Kesehatan & Kesejahteraan</h3>
+                    <p class="text-gray-600 mb-6">Meningkatkan akses kesehatan dan mempromosikan gaya hidup sehat di daerah terpencil.</p>
+                    <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-800 transition duration-300">
+                        Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -265,8 +364,8 @@
     <!-- Featured Programs -->
     <section id="programs" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Featured Programs</h2>
-            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Discover our flagship initiatives that are transforming lives and communities.</p>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Program Unggulan</h2>
+            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Temukan inisiatif utama kami yang mengubah hidup dan masyarakat.</p>
             
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg">
@@ -320,8 +419,8 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Our CSR Gallery</h2>
-            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Visual stories of our impact and the communities we serve.</p>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Galeri CSR Kami</h2>
+            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Kisah visual dampak kami dan komunitas yang kami layani.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Gallery Item 1 -->
@@ -389,91 +488,96 @@
     </section>
 
     <!-- Impact Stories -->
-    <section id="impact" class="py-20 bg-gray-50">
+    <section id="impact" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Impact Stories</h2>
-            <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Hear from the communities and individuals whose lives have been transformed.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">Testimonial</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Kisah Inspiratif</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Bagaimana program kami telah mengubah kehidupan nyata</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')"></div>
                     <div class="p-6">
-                        <div class="flex items-center mb-6">
-                            <img class="w-16 h-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Testimonial">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full object-cover border-2 border-white -mt-8 shadow-lg" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial">
                             <div class="ml-4">
-                                <h4 class="font-semibold text-gray-800">Ahmad Fauzi</h4>
-                                <p class="text-gray-500 text-sm">Beneficiary, Digital Literacy Program</p>
+                                <h4 class="font-bold text-gray-800">Ahmad Fauzi</h4>
+                                <p class="text-gray-500 text-sm">Penerima Manfaat</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic mb-6">"Thanks to the digital skills training, I was able to start my own online business and support my family during difficult times."</p>
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="relative">
+                            <i class="fas fa-quote-left text-gray-200 text-4xl absolute -top-1 left-0"></i>
+                            <p class="text-gray-600 pl-8 mb-4">"Pelatihan digital dari program ini membantu saya membuka usaha online dan menafkahi keluarga di masa sulit."</p>
+                            <div class="flex text-yellow-400 pl-8 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 pl-8">Program Literasi Digital, 2023</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1529301755392-9f4d583f12bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')"></div>
                     <div class="p-6">
-                        <div class="flex items-center mb-6">
-                            <img class="w-16 h-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Testimonial">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full object-cover border-2 border-white -mt-8 shadow-lg" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Testimonial">
                             <div class="ml-4">
-                                <h4 class="font-semibold text-gray-800">Siti Rahmah</h4>
-                                <p class="text-gray-500 text-sm">Community Leader</p>
+                                <h4 class="font-bold text-gray-800">Siti Rahmah</h4>
+                                <p class="text-gray-500 text-sm">Ketua Komunitas</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic mb-6">"The clean water project has dramatically improved health in our village. Children no longer miss school due to waterborne illnesses."</p>
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="relative">
+                            <i class="fas fa-quote-left text-gray-200 text-4xl absolute -top-1 left-0"></i>
+                            <p class="text-gray-600 pl-8 mb-4">"Proyek air bersih ini telah meningkatkan kesehatan di desa kami. Anak-anak tidak lagi sering sakit."</p>
+                            <div class="flex text-yellow-400 pl-8 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 pl-8">Proyek Air Bersih, 2022</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')"></div>
                     <div class="p-6">
-                        <div class="flex items-center mb-6">
-                            <img class="w-16 h-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Testimonial">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full object-cover border-2 border-white -mt-8 shadow-lg" src="https://randomuser.me/api/portraits/women/63.jpg" alt="Testimonial">
                             <div class="ml-4">
-                                <h4 class="font-semibold text-gray-800">Dr. Nurul Huda</h4>
-                                <p class="text-gray-500 text-sm">Medical Volunteer</p>
+                                <h4 class="font-bold text-gray-800">Dr. Nurul Huda</h4>
+                                <p class="text-gray-500 text-sm">Relawan Medis</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic mb-6">"The mobile clinic initiative has brought essential healthcare to remote areas where medical services were previously inaccessible."</p>
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                        <div class="relative">
+                            <i class="fas fa-quote-left text-gray-200 text-4xl absolute -top-1 left-0"></i>
+                            <p class="text-gray-600 pl-8 mb-4">"Klinik keliling ini memberikan akses kesehatan esensial ke daerah terpencil yang sebelumnya tidak terjangkau."</p>
+                            <div class="flex text-yellow-400 pl-8 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 pl-8">Klinik Keliling, 2021-Sekarang</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Annual Report -->
-    <section id="report" class="py-20 bg-blue-600 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h2 class="text-3xl font-bold mb-6">2023 CSR Annual Report</h2>
-                    <p class="text-xl mb-8 opacity-90">Explore our comprehensive report detailing our CSR initiatives, achievements, and future commitments to sustainable development.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="bg-white text-blue-700 w-auto px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
-                            <i class="fas fa-download mr-2"></i> Download PDF
-                        </a>
-                        <a href="#" class="border-2 border-white w-auto px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition duration-300">
-                            <i class="fas fa-book-open mr-2"></i> Read Online
-                        </a>
-                    </div>
-                </div>
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-base font-medium rounded-lg text-blue-600 hover:bg-blue-100 transition duration-300">
+                    Lihat Lebih Banyak Kisah
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
