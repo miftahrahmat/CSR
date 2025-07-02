@@ -117,6 +117,15 @@
             bottom: 20px;
         }
         
+        .scroll-contact {
+            bottom: 140px;
+            background: rgba(220, 38, 38, 0.8); /* red-600 with transparency */
+        }
+        
+        .scroll-contact:hover {
+            background: rgba(220, 38, 38, 1);
+        }
+        
         .form-success {
             display: none;
             padding: 1rem;
@@ -174,12 +183,15 @@
         </div>
     </nav>
 
-    <!-- Scroll Buttons -->
+    <!-- Floating Buttons -->
     <div class="scroll-btn scroll-up" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <i class="fas fa-arrow-up"></i>
     </div>
     <div class="scroll-btn scroll-down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})">
         <i class="fas fa-arrow-down"></i>
+    </div>
+    <div class="scroll-btn scroll-contact" onclick="window.open('mailto:partnership@amalsholeh.com', '_blank')">
+        <i class="fas fa-headset"></i>
     </div>
 
     <!-- Hero Section -->
@@ -318,10 +330,11 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
-                    <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                    <div class="relative w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
                         <i class="fas fa-hand-holding-heart text-blue-600 text-2xl"></i>
+                        <img src="https://csr.amalsholeh.com/assets/sdgs1.png" alt="SDGS 1" class="absolute -right-1 -bottom-1 w-8 h-8 rounded-full border-2 border-white">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pengembangan Masyarakat</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pengembangan Masyarakat <span class="text-sm text-gray-500">(SDGS 1, 11)</span></h3>
                     <p class="text-gray-600 mb-6">Memberdayakan masyarakat melalui pendidikan, kesehatan, dan pengembangan infrastruktur dasar.</p>
                     <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300">
                         Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
@@ -329,10 +342,11 @@
                 </div>
 
                 <div class="bg-gradient-to-b from-green-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
-                    <div class="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                    <div class="relative w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
                         <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                        <img src="https://csr.amalsholeh.com/assets/sdgs6.png" alt="SDGS 13" class="absolute -right-1 -bottom-1 w-8 h-8 rounded-full border-2 border-white">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Keberlanjutan Lingkungan</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Keberlanjutan Lingkungan <span class="text-sm text-gray-500">(SDGS 6, 13-15)</span></h3>
                     <p class="text-gray-600 mb-6">Mempromosikan praktik ramah lingkungan dan upaya konservasi untuk masa depan yang lebih hijau.</p>
                     <a href="#" class="inline-flex items-center text-green-600 hover:text-green-800 transition duration-300">
                         Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
@@ -340,10 +354,11 @@
                 </div>
 
                 <div class="bg-gradient-to-b from-purple-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
-                    <div class="w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                    <div class="relative w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
                         <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                        <img src="https://csr.amalsholeh.com/assets/4sdgs.png" alt="SDGS 4" class="absolute -right-1 -bottom-1 w-8 h-8 rounded-full border-2 border-white">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pendidikan & Pemberdayaan</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pendidikan & Pemberdayaan <span class="text-sm text-gray-500">(SDGS 4, 5, 8, 10)</span></h3>
                     <p class="text-gray-600 mb-6">Menyediakan akses pendidikan berkualitas dan pelatihan keterampilan untuk kelompok kurang mampu.</p>
                     <a href="#" class="inline-flex items-center text-purple-600 hover:text-purple-800 transition duration-300">
                         Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
@@ -351,10 +366,11 @@
                 </div>
 
                 <div class="bg-gradient-to-b from-orange-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-500 group">
-                    <div class="w-20 h-20 bg-orange-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
+                    <div class="relative w-20 h-20 bg-orange-100 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-6">
                         <i class="fas fa-heartbeat text-orange-600 text-2xl"></i>
+                        <img src="https://csr.amalsholeh.com/assets/sdgs3.png" alt="SDGS 3" class="absolute -right-1 -bottom-1 w-8 h-8 rounded-full border-2 border-white">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Kesehatan & Kesejahteraan</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Kesehatan & Kesejahteraan <span class="text-sm text-gray-500">(SDGS 2, 3, 16)</span></h3>
                     <p class="text-gray-600 mb-6">Meningkatkan akses kesehatan dan mempromosikan gaya hidup sehat di daerah terpencil.</p>
                     <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-800 transition duration-300">
                         Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
@@ -912,5 +928,12 @@
         // Initialize scroll buttons
         document.querySelector('.scroll-up').style.display = 'none';
         document.querySelector('.scroll-down').style.display = 'flex';
+        document.querySelector('.scroll-contact').style.display = 'flex';
+        
+        // Keep contact button always visible
+        window.addEventListener('scroll', function() {
+            const scrollContact = document.querySelector('.scroll-contact');
+            scrollContact.style.display = 'flex';
+        });
     </script>
 <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with ❤️ in Bandung</p></html>
